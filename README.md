@@ -1,116 +1,123 @@
-Lenafo Sage WooCommerce Starter
+# Lenafo Sage WooCommerce Starter
 
-Tema moderno para WordPress basado en Sage 10, con estilos utilitarios de Tailwind CSS y soporte completo para WooCommerce. Plantilla lista para desarrollo rápido, escalable, con alto rendimiento, y preparada para producción y distribución en marketplaces.
-🚀 Características principales
+Tema moderno para WordPress basado en **Sage 10**, con estilos utilitarios de **Tailwind CSS** y soporte completo para **WooCommerce**. Plantilla lista para desarrollo rápido, escalable, con alto rendimiento, y preparada para producción y distribución en marketplaces.
 
-    Sage 10 con Blade templating y arquitectura modular moderna.
+---
 
-    Tailwind CSS para estilos responsivos, mobile-first y altamente personalizables.
+## 🚀 Características principales
 
-    WooCommerce integrado con generoi/sage-woocommerce para manejo de tienda online.
+- **Sage 10** con Blade templating y arquitectura modular moderna.
+- **Tailwind CSS** para estilos responsivos, mobile-first y altamente personalizables.
+- **WooCommerce** integrado con [`generoi/sage-woocommerce`](https://github.com/generoi/sage-woocommerce).
+- Plantillas base para listado y detalle de productos.
+- Configuración Vite con hot reload y build optimizado.
+- Totalmente compatible con WordPress y WooCommerce actualizados.
+- Preparado para animaciones, ACF, y componentes Blade reutilizables.
 
-    Plantillas base para listado y detalle de productos (archive-product.blade.php y single-product.blade.php).
+---
 
-    Configuración Vite para desarrollo rápido con hot reload y build optimizado.
+## 🔧 Requisitos previos
 
-    Compatibilidad con WordPress y WooCommerce actualizados.
+- PHP 8.0 o superior
+- Composer
+- Node.js v16 o superior
+- Yarn o npm
+- WordPress instalado
+- WooCommerce instalado
+- WP-CLI (opcional, recomendado)
 
-    Preparado para implementar animaciones y personalizaciones avanzadas.
+---
 
-    Estructura limpia para mantener y escalar tu proyecto fácilmente.
+## ⚙️ Instalación
 
-🔧 Requisitos previos
+1. Clona este repositorio dentro de `wp-content/themes`:
 
-    PHP 8.0 o superior
-
-    Composer
-
-    Node.js (versión 16+ recomendada)
-
-    Yarn o npm
-
-    Instalación de WordPress y WooCommerce (versión compatible)
-
-    WP-CLI (opcional pero recomendado)
-
-⚙️ Instalación
-
-    Clona el repositorio dentro de wp-content/themes de tu instalación WordPress:
-
+```bash
 cd wp-content/themes
 git clone https://github.com/lenafo/sage-woocommerce-starter.git mi-theme
 cd mi-theme
+```
 
-    Instala las dependencias PHP y JS:
+2. Instala dependencias:
 
+```bash
 composer install
 yarn install
+```
 
-    Configura tu entorno local copiando el archivo .env.example a .env y ajusta URLs:
+3. Copia el archivo de entorno:
 
+```bash
 cp .env.example .env
-# Edita .env con tu editor favorito para poner tu URL local (APP_URL)
+```
 
-    Publica las vistas personalizadas de WooCommerce:
+Edita `.env` y asegúrate de que `APP_URL` apunta a tu URL local.
 
+4. Publica las vistas de WooCommerce:
+
+```bash
 wp acorn vendor:publish --tag="woocommerce-template-views"
+```
 
-    Ejecuta el servidor de desarrollo con hot reload:
+5. Ejecuta el entorno de desarrollo:
 
+```bash
 yarn dev
+```
 
-    Activa el tema desde el panel de administración WordPress.
+6. Activa el tema en el panel de administración de WordPress.
 
-🛠️ Uso y desarrollo
+---
 
-    Las vistas Blade se encuentran en resources/views. Edita y crea componentes reutilizables.
+## 🛠️ Desarrollo
 
-    Estilos Tailwind se configuran y extienden en tailwind.config.js y se importan en resources/css/app.css.
+- Archivos Blade en `resources/views`
+- CSS Tailwind en `resources/css/app.css`
+- JS en `resources/js/app.js`
+- Ejecuta `yarn build` para versión de producción
+- Agrega GSAP con:
 
-    Scripts JavaScript modernos se editan en resources/js/app.js.
-
-    Para construir los assets listos para producción, ejecuta:
-
-yarn build
-
-    Para añadir animaciones, puedes instalar GSAP:
-
+```bash
 yarn add gsap
+```
 
-y luego importarlo y usarlo en resources/js/app.js.
+- Integra ACF Pro para campos personalizados
 
-    Para campos personalizados y bloques avanzados, integra ACF Pro y usa sus funciones en tus vistas Blade.
+---
 
-🧪 Testing y producción
+## 🧪 Testing y optimización
 
-    Utiliza herramientas como Query Monitor para debug.
+- Usa [Query Monitor](https://wordpress.org/plugins/query-monitor/)
+- Lighthouse y PageSpeed Insights para performance
+- Optimiza imágenes, scripts, fonts
+- Usa lazy loading
+- Prueba en móvil y diferentes navegadores
 
-    Optimiza las imágenes y recursos estáticos para mejorar la carga.
+---
 
-    Implementa lazy loading para imágenes y scripts no críticos.
+## 📚 Recursos
 
-    Comprueba con Lighthouse y PageSpeed Insights que el rendimiento es óptimo.
+- [Roots Sage 10](https://roots.io/sage/docs/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [WooCommerce Docs](https://woocommerce.com/documentation/)
+- [Blade Templating (Laravel)](https://laravel.com/docs/blade)
+- [generoi/sage-woocommerce](https://github.com/generoi/sage-woocommerce)
 
-    Realiza pruebas en dispositivos móviles y diferentes navegadores para asegurar compatibilidad.
+---
 
-📚 Recursos útiles
+## 🙋‍♀️ Contribuciones
 
-    Documentación Sage 10
+Este proyecto es mantenido por **Lenafo**.
 
-    Tailwind CSS Docs
+Si encuentras un bug o tienes una sugerencia, abre un issue.  
+¿Quieres mejorar el proyecto? Haz un fork y envía tu pull request.
 
-    WooCommerce Docs
+---
 
-    Generoi Sage WooCommerce
+## 📄 Licencia
 
-    Blade Templating
+MIT © 2025 Lenafo — Consulta el archivo `LICENSE` para más información.
 
-🙋‍♂️ Soporte y contribución
+---
 
-Este repositorio es mantenido por Lenafo. Puedes abrir issues para sugerencias o reportar errores.
-
-Si quieres colaborar, crea un fork y envía pull requests con mejoras.
-📄 Licencia
-
-Este proyecto está bajo licencia MIT — consulta el archivo LICENSE para más detalles.
-¡Gracias por usar esta plantilla! 🚀
+### 🚀 ¡Gracias por usar esta plantilla!
