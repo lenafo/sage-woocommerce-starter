@@ -1,7 +1,7 @@
 # Node dependencies
 node_modules/
 
-# Yarn lockfile (opcional, si usas npm en producción)
+# Yarn lockfile (si prefieres npm en producción, puedes ignorar este)
 yarn.lock
 
 # Composer dependencies
@@ -27,17 +27,20 @@ public/
 *.swo
 *.swn
 
-# OS-specific
+# OS-specific files
 Thumbs.db
 .DS_Store
 
 # PHPStorm or VSCode indexing
 /.phpstorm.meta.php
 
-# Misc
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# WordPress uploads (if cloned into theme, not recommended)
-/uploads/
+# WordPress uploads (si no forman parte del tema, no subir)
+# /uploads/
+
+# Excepciones: NO ignorar style.css para que WordPress detecte el tema
+!style.css
