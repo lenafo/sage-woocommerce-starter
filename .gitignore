@@ -1,0 +1,43 @@
+# Node dependencies
+node_modules/
+
+# Yarn lockfile (opcional, si usas npm en producción)
+yarn.lock
+
+# Composer dependencies
+/vendor/
+
+# Environment files
+.env
+.env.*
+.env.local
+
+# Build output (Vite)
+public/
+
+# Cache and logs
+/.DS_Store
+/storage/
+*.log
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# OS-specific
+Thumbs.db
+.DS_Store
+
+# PHPStorm or VSCode indexing
+/.phpstorm.meta.php
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# WordPress uploads (if cloned into theme, not recommended)
+/uploads/
